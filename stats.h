@@ -29,8 +29,8 @@ void print_statistics(unsigned char *stat_arr, int size);
 /**
  * @brief A function that prints the statistics of an array including minimum, maximum, mean, and median.
  *
- *  Takes an unsigned char array and an int forthe size of that array. The min, max, mean, and median of the array are determined 
- *  then displayed using printf from this function.
+ *  Takes an unsigned char array and an int forthe size of that array. This function will call the find_mean, find_median, find_maximum
+ *  and find minimum functions. Those functions are responsible for printing their values
  *
  * @param stat_arr: The unsigned char pointer that is used to access the array
  * @param size: An int that is the size of the array
@@ -42,60 +42,61 @@ void print_array(unsigned char *stat_arr, int size);
  * @brief  Given an array of data and a length, prints the array to the screen
  *
  *  Takes an unsigned char array and an int for the size of that array. The contents of the array are displayed using printf from this function.
+ *  It will print a line break after every 10 elements to improve readablity.
  *
  * @param stat_arr: The unsigned char pointer that is used to access the array
  * @param size: An int that is the size of the array
 */
 
-unsigned char find_median();
+unsigned char find_median(unsigned char *stat_arr, int size);
 
 /**
  * @brief Given an array of data and a length, returns the median value
  *
  *  Takes an unsigned char array and and int for the size of that array. The median value of the array is determined 
- *  then returned from the function instead of displayed by this function.
+ *  then returned from the function and displayed by this function.
  *
  * @param stat_arr: The unsigned char pointer that is used to access the array
  * @param size: An int that is the size of the array
 */
 
-unsigned char find_mean();
+unsigned char find_mean(unsigned char *stat_arr, int size);
 
 /**
  * @brief Given an array of data and a length, returns the mean
  *
  *  Takes an unsigned char array and an int for the size of that array. The mean value of the array is determined 
- *  then returned from the function instead of displayed by this function.
+ *  then returned from the function and displayed by this function.
  *
  * @param stat_arr: The unsigned char pointer that is used to access the array
  * @param size: An int that is the size of the array
 */ 
 
-unsigned char find_maximum();
+unsigned char find_maximum(unsigned char *stat_arr, int size);
 
 /**
  * @brief Given an array of data and a length, returns the maximum
  *
  *  Takes an unsigned char array and an int for the size of that array. The maximum value of the array is determined 
- *  then returned from the function instead of displayed by this function.
+ *  then returned from the function and displayed by this function.
  *
  * @param stat_arr: The unsigned char pointer that is used to access the array
  * @param size: An int that is the size of the array
 */
 
-unsigned char find_minimum();
+unsigned char find_minimum(unsigned char *stat_arr, int size);
 
 /**
  * @brief Given an array of data and a length, returns the minimum
  *
  *  Takes an unsigned char array and an int for the size of that array. The minimum value of the array is determined 
- *  then returned from the function instead of displayed by this function.
+ *  then returned from the function and displayed by this function.
  *
  * @param stat_arr: The unsigned char pointer that is used to access the array
  * @param size: An int that is the size of the array
 */ 
 
-void sort_array();
+void sort_array(unsigned char *stat_arr, int size);
 
 /**
  * @brief Given an array of data and a length, sorts the array from largest to smallest.  (The zeroth Element should be the largest value, and the last element (n-1) should be the smallest value. )
